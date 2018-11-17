@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- REQUIRED META TAGS -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!-- U P D A T E  F O R  A L L  N O N - S K E L T A L S  D O O T -->
+        <title>Can You Get 100%?</title>
+        <meta name="description" content="JS Quiz">
+        <meta name="author" content="Mike">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="./css/Quiz.css">
+
+    </head>
+    <body>
+
+        <div class = "container">
+            <header>
+                <div class = "pull-left"><h2>The Ultimate Dragonball Quiz</h2></div>
+            </header>
+
+            <main>
+
+                <form class="questionForm" name="q1" id="q1" data-question="1">
+                    <h3>Question 1: What is the name of Goku's brother?</h3>
+                    <ul>
+                        <li><input type="radio" name="q1" value="krillin"/> Krillin <img src="./img/portrait-krillin.png"/></li>
+                        <li><input type="radio" name="q1" value="vegeta"/> Vegeta <img src="./img/portrait-vegeta.png"/></li>
+                        <li><input type="radio" name="q1" value="raditz"/> Raditz <img src="./img/portrait-raditz.png"/></li>
+                        <li><input type="radio" name="q1" value="piccolo"/> Piccolo <img src="./img/portrait-piccolo.png"/></li>
+                    </ul>
+                    <hr>
+                    <button id="submit"> Submit </button>
+                    <hr>
+                </form>
+
+                <form class="questionForm" name="q2" id="q2" data-question="2">
+                    <h3>Question 2: Who was the first to achieve gattai?</h3>
+                    <ul>
+                        <li><input type="checkbox" name="q2" value="gotenks"/> Gotenks <img src="./img/portrait-gotenks.png"/></li>
+                        <li><input type="checkbox" name="q2" value="gogeta"/> Gogeta <img src="./img/portrait-gogeta.png"/></li>
+                        <li><input type="checkbox" name="q2" value="cell"/> Perfect Cell <img src="./img/portrait-cell.png"/></li>
+                        <li><input type="checkbox" name="q2" value="broly"/> Broly <img src="./img/portrait-broly.png"/></li>
+                    </ul>
+                    <hr>
+                    <button id="submit">Submit</button>
+                    <hr>
+                </form>
+
+                <form class="questionForm" name="q3" id="q3" data-question="3">
+                    <h3>Question 3: Which android sacrificed themself in the fight against Cell?</h3>
+                    <img src="./img/fight-cell.png"/>
+                    <br>
+                    <span>Android #:</span>
+                    <input type="text" name="q3" id="q3a"/>
+                    <hr>
+                    <button id="submit">Submit</button>
+                    <hr>
+                </form>
+
+                <form class="questionForm" name="q4" id="q4" data-question="4">
+                    <h3>Question 4: What color is Chiaotzu?</h3>
+                    <img src="./img/tien.png"/>
+                    <br>
+                    <span>Choose a color here:</span>
+                    <input type="color" name="q4" id="q4a"/>
+                    <hr>
+                    <button id="submit">Submit</button>
+                    <hr>
+                </form>
+
+                <form class="questionForm" name="q5" id="q5" data-question="5">
+                    <h3>Question 5: What is Goku's power level in the fight with Vegeta and Nappa?</h3>
+                    <img src="./img/powerlevel-goku.png"/>
+                    <br>
+                    <span>Use the slider here:</span>
+                    <input type="range" min="0" max="9001"  name="q5" id="q5a" oninput="q5Output.value = q5a.value"/>
+                    <output name="q5Output" id="q5Output">0</output>
+                    <hr>
+                    <button id="submit" onclick="check();">Submit</button>
+                    <hr>
+                </form>
+
+                <div id="results"></div>
+
+            </main>
+
+            <footer>
+                <div class="pull-right">Is your power level high enough?</div>
+            </footer>
+
+        </div>
+
+
+
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="./js/Quiz.js"></script>
+    </body>
+</html>
